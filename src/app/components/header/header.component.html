@@ -1,0 +1,13 @@
+<header class="header">
+	<div>
+		<ul>
+			<li><a routerLink="/">Home</a></li>
+			<li *ngIf="isLoggedIn"><a routerLink="/favorites">Favorites</a></li>
+		</ul>
+	</div>
+	<div>
+		<div *ngIf="!isLoggedIn">
+			<app-button (click)="onClickHandler($event)" title="Login"></app-button>
+		</div>
+	</div>
+</header>

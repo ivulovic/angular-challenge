@@ -1,0 +1,8 @@
+<div *ngIf="!rows.length; else dataBlock">No data</div>
+
+<ng-template #dataBlock>
+	<app-table
+		[columns]="columns"
+		[rows]="rows"
+	></app-table>
+</ng-template>

@@ -1,0 +1,14 @@
+<div *ngIf="data">
+		<app-table
+		[columns]="columns"
+		[rows]="[data]"></app-table>
+
+	<div *ngIf="isLoggedIn">
+		<div *ngIf="favorites.includes(data.name); else addToFavorites">
+			<app-button type="error" title="Remove to favorites" (click)="handleFavoriteToggle(data.name)"></app-button>
+		</div>
+		<ng-template #addToFavorites>
+			<app-button title="Add to favorites" (click)="handleFavoriteToggle(data.name)"></app-button>
+		</ng-template>
+	</div>
+</div>

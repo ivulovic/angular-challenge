@@ -1,0 +1,13 @@
+button.button{
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+  min-width: 125px;
+  font-weight: bold;
+  cursor: pointer;
+  &.error{
+    background: indianred;
+  }
+}

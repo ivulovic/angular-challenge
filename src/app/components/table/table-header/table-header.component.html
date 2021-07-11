@@ -1,0 +1,5 @@
+<div class="header" *ngIf="columns">
+	<div class="row bold">
+	 <div *ngFor="let item of columns" [class]="item.align">{{item.label}}</div>
+ </div>
+</div>

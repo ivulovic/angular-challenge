@@ -1,0 +1,15 @@
+<div class="body">
+	 <div class="row" *ngFor="let item of rows">
+		<div *ngFor="let col of columns">
+			<div *ngIf="col.field === 'name' && col.linkGenerator; else defaultFieldRenderer">
+				<a [routerLink]="col.linkGenerator(item.name)">{{item[col.field]}}</a>
+			</div>
+			<ng-template #defaultFieldRenderer>
+				<div [class]="col.align">
+					{{item[col.field]}}
+				</div>
+			</ng-template>
+		</div>
+		</div>
+
+</div>

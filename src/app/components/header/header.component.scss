@@ -1,0 +1,33 @@
+header.header{
+  box-shadow: 0px 3px 8px #ddd;
+  &,
+  ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    justify-content: space-between;
+  }
+  li{
+    list-style: none;
+    display: inline-block;
+  }
+  a{
+    display: block;
+		text-decoration: none;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--text);
+
+    &.active{
+      color: var(--primary);
+      font-weight: 600;
+    }
+    &:not(.active){
+      color: var(--secondary);
+    }
+  }
+  li:first-child a{
+    padding-left: 0;
+  }
+}
